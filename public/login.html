@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <form action="/login" method="post">
+    <input type="text" name="username" id="name" placeholder="Username" required>
+    <button type="submit" id="login">Login</button>
+  </form>
+
+  <script>
+    document.getElementById("login").addEventListener("click", () => {
+      let val = document.getElementById("name").value;
+
+      // Save the username in localStorage
+      localStorage.setItem("username", val);
+
+      // Log the username to the console
+      console.log(val);
+    });
+  </script>
+</body>
+</html>
